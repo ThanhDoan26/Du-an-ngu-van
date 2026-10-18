@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông Tin Tác Giả & Giới Thiệu Đề Tài - Sĩ Tử 12</title>
+  <meta name="description"
+    content="Trang giới thiệu thông tin tác giả và tổng quan đề tài: Sĩ Tử 12 - Tri Thức Vàng & Đấu Trường THPT Quốc Gia.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Ambient Glow Background -->
+  <div class="ambient-glow"></div>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="logo-wrapper">
+        <div class="logo-icon">
+          <i class="fas fa-feather-pointed"></i>
+        </div>
+        <div class="logo-text">
+          <h1>SĨ TỬ 12 <span class="badge-year">THPT QG</span></h1>
+          <p>Hồ Sơ Đề Tài & Thông Tin Tác Giả</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <a href="app.html" class="btn btn-primary btn-sm" style="text-decoration: none; padding: 0.55rem 1.25rem;">
+          <i class="fas fa-rocket"></i> Vào Trang Học Tập & Đấu Trường <i class="fas fa-arrow-right"></i>
+        </a>
+        <button class="btn-icon" id="theme-toggle-btn" title="Chuyển chế độ Sáng/Tối">
+          <i class="fas fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Showcase Container -->
+  <main class="app-main">
+    <!-- Hero Section -->
+    <section class="author-hero-section">
+      <div class="project-badge-pill">
+        <i class="fas fa-certificate"></i> DỰ ÁN HỌC TẬP & ÔN THI TỐT NGHIỆP THPT QUỐC GIA 2026
+      </div>
+
+      <h1 class="author-hero-title">
+        SĨ TỬ 12: TRI THỨC VÀNG & ĐẤU TRƯỜNG THPTQG
+      </h1>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+        <span class="badge badge-primary" style="font-size: 0.85rem; padding: 0.35rem 0.85rem;"><i class="fas fa-users"></i> Học sinh: Lê Hồng Quân, Đỗ Tiến Dũng</span>
+        <span class="badge badge-accent" style="font-size: 0.85rem; padding: 0.35rem 0.85rem;"><i class="fas fa-flag"></i> Chi Đoàn 12A2</span>
+        <span class="badge badge-outline" style="font-size: 0.85rem; padding: 0.35rem 0.85rem;"><i class="fas fa-school"></i> THPT Yên Lãng</span>
+        <span class="badge badge-primary" style="font-size: 0.85rem; padding: 0.35rem 0.85rem;"><i class="fas fa-chalkboard-user"></i> GVHD: Võ Thị Mỹ Ngà</span>
+      </div>
+
+      <p class="author-hero-subtitle">
+        Hệ thống chuyển đổi số học tập hiện đại dành riêng cho học sinh lớp 12: Tổng hợp toàn diện kiến thức 5 tác phẩm trọng tâm môn <strong>Ngữ Văn 9+</strong> (Xuân Tóc Đỏ cứu quốc, Mùa lá rụng trong vườn, Cảm hoài, Tây Tiến, Đàn ghi ta của Lor-ca), Sổ tay đa môn cốt lõi và <strong>Đấu Trường Trắc Nghiệm Gamified</strong> kích thích phản xạ tư duy.
+      </p>
+
+      <!-- Huge CTA Buttons -->
+      <div class="hero-cta-group">
+        <a href="app.html" class="btn-hero-cta">
+          <i class="fas fa-play-circle"></i> VÀO TRẢI NGHIỆM WEBSITE NGAY <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#author-dossier" class="btn-hero-secondary">
+          <i class="fas fa-id-card"></i> Xem Thông Tin Tác Giả & Đề Tài
+        </a>
+      </div>
+    </section>
+
+    <!-- Dossier Section: 2 Columns (Author Info & Project Specs) -->
+    <section class="dossier-grid" id="author-dossier">
+      <!-- 1. THẺ THÔNG TIN TÁC GIẢ -->
+      <div class="dossier-card author-card">
+        <div class="dossier-header">
+          <div class="author-avatar-circle">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="dossier-title-box">
+            <h3>THÔNG TIN TÁC GIẢ</h3>
+            <span class="dossier-tagline"><i class="fas fa-check-circle"></i> Người Sáng Lập & Phát Triển Đề Tài</span>
+          </div>
+        </div>
+
+        <div class="info-rows-list">
+          <div class="info-row">
+            <i class="fas fa-user"></i>
+            <div>
+              <span class="label">Họ và tên:</span>
+              <span class="val">LÊ HỒNG QUÂN , ĐỖ TIẾN DŨNG</span>
+              <span style="font-size: 0.78rem; color: var(--accent-cyan); display: block;">(Học sinh )</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <i class="fas fa-graduation-cap"></i>
+            <div>
+              <span class="label">Lớp / Niên khóa:</span>
+              <span class="val">Chi Đoàn 12A2</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <i class="fas fa-school"></i>
+            <div>
+              <span class="label">Trường học:</span>
+              <span class="val">Trường THPT Yên Lãng</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <i class="fas fa-chalkboard-user"></i>
+            <div>
+              <span class="label">Giáo Viên:</span>
+              <span class="val">Võ Thị Mỹ Ngà</span>
+            </div>
+          </div>
+
+          <!-- <div class="info-row">
+            <i class="fas fa-laptop-code"></i>
+            <div>
+              <span class="label">Vai trò chính:</span>
+              <span class="val">Thiết kế UI/UX, Phát triển Frontend & Game Engine</span>
+            </div>
+          </div> -->
+
+          <div class="info-row">
+            <i class="fas fa-calendar-check"></i>
+            <div>
+              <span class="label">Thời gian hoàn thành:</span>
+              <span class="val">Tháng 10/2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-motto">
+          "Em xây dựng website này với mong muốn biến việc học Văn và ôn thi THPT không còn khô khan, mà trở thành một
+          trải nghiệm sống động, trực quan và tràn đầy cảm hứng cho tất cả các bạn học sinh lớp 12."
+        </div>
+      </div>
+
+      <!-- 2. HỒ SƠ ĐỀ TÀI & CÔNG NGHỆ -->
+      <div class="dossier-card project-card">
+        <div class="dossier-header">
+          <div class="project-icon-circle">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <div class="dossier-title-box">
+            <h3>HỒ SƠ ĐỀ TÀI & CÔNG NGHỆ</h3>
+            <span class="dossier-tagline" style="color: var(--accent-amber);"><i class="fas fa-layer-group"></i> Kiến
+              Trúc Hệ Thống & Phương Pháp</span>
+          </div>
+        </div>
+
+        <div class="info-rows-list">
+          <div class="info-row">
+            <i class="fas fa-bullseye"></i>
+            <div>
+              <span class="label">Mục tiêu đề tài:</span>
+              <span class="val">Hệ thống hóa toàn bộ tác phẩm văn học 12, cung cấp dàn ý 9+, cẩm nang NLXH 200 chữ và
+                rèn phản xạ phòng thi qua game trắc nghiệm.</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <i class="fas fa-code"></i>
+            <div>
+              <span class="label">Công nghệ cốt lõi:</span>
+              <span class="val">HTML5 Semantic, Vanilla CSS3 (Glassmorphism & Responsive), Modern JavaScript
+                ES6+.</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <i class="fas fa-music"></i>
+            <div>
+              <span class="label">m thanh tương tác:</span>
+              <span class="val">Web Audio API Sound Engine (tổng hợp âm thanh procedural, độ trễ 0ms, không phụ thuộc
+                file ngoài).</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <i class="fas fa-brain"></i>
+            <div>
+              <span class="label">Phương pháp học tập:</span>
+              <span class="val">Active Recall (Chủ động nhớ lại), Spaced Repetition qua Flashcard 3D và Gamification
+                (Hóa trò chơi).</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <i class="fas fa-database"></i>
+            <div>
+              <span class="label">Lưu trữ dữ liệu:</span>
+              <span class="val">LocalStorage Client-Side (Lưu điểm kỷ lục, huy hiệu đạt được, tác phẩm đã lưu, theme
+                sáng/tối).</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack Badges -->
+        <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="badge badge-primary"><i class="fab fa-html5"></i> HTML5 Semantic</span>
+          <span class="badge badge-accent"><i class="fab fa-css3-alt"></i> CSS3 Glassmorphism</span>
+          <span class="badge badge-outline"><i class="fab fa-js"></i> JavaScript ES6+</span>
+          <span class="badge badge-primary"><i class="fas fa-wave-square"></i> Web Audio API</span>
+          <span class="badge badge-accent"><i class="fas fa-wand-magic-sparkles"></i> Canvas Confetti</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 Feature Pillars -->
+    <section>
+      <h2 class="features-section-title"><i class="fas fa-cubes"></i> 6 Phân Hệ Tính Năng Của Website</h2>
+      <p class="features-section-desc">Toàn bộ công cụ và tài liệu học tập được tích hợp hoàn chỉnh trong một trang web
+        duy nhất.</p>
+
+      <div class="author-features-grid">
+        <div class="author-feat-card">
+          <div class="feat-icon-box"><i class="fas fa-book-bookmark"></i></div>
+          <h4>5 Tác Phẩm Ngữ Văn 12 Trọng Tâm</h4>
+          <p>Khảo sát chuyên sâu 5 tác phẩm: Xuân Tóc Đỏ cứu quốc, Mùa lá rụng trong vườn, Cảm hoài, Tây Tiến và Đàn ghi ta của Lor-ca. Sơ đồ luận điểm, trích dẫn đắt giá và mẹo đạt điểm 9+.</p>
+        </div>
+
+        <div class="author-feat-card">
+          <div class="feat-icon-box" style="background: rgba(236, 72, 153, 0.15); color: var(--accent-secondary);"><i
+              class="fas fa-gem"></i></div>
+          <h4>Kho Nhận Định Đắt Giá</h4>
+          <p>30+ câu nhận định văn học đắt giá từ các nhà phê bình hàng đầu. Phân loại theo Thơ ca, Hiện thực, Nghệ
+            thuật, kèm nút sao chép nhanh 1-chạm.</p>
+        </div>
+
+        <div class="author-feat-card">
+          <div class="feat-icon-box" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);"><i
+              class="fas fa-pen-nib"></i></div>
+          <h4>NLXH 200 Chữ</h4>
+          <p>Quy trình 5 bước chuẩn barem chấm thi Bộ GD&ĐT cùng ngân hàng dẫn chứng thời sự người thật việc thật có số
+            liệu (Google AI Lê Viết Quốc, Thùy Tiên...).</p>
+        </div>
+
+        <div class="author-feat-card">
+          <div class="feat-icon-box" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);"><i
+              class="fas fa-clipboard-check"></i></div>
+          <h4>Bí Kíp Đọc Hiểu 3 Điểm</h4>
+          <p>Bảng tra cứu 6 phong cách ngôn ngữ, 6 phương thức biểu đạt và công thức 3 bước trả lời tác dụng biện pháp
+            tu từ để không bị trừ điểm.</p>
+        </div>
+
+        <div class="author-feat-card">
+          <div class="feat-icon-box" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);"><i
+              class="fas fa-bolt"></i></div>
+          <h4>Flashcards 3D Tương Tác</h4>
+          <p>Thẻ ghi nhớ không gian 3 chiều giúp học sinh ôn nhanh từng chi tiết nghệ thuật, xuất xứ và công thức cốt
+            lõi thông qua tương tác chạm để lật.</p>
+        </div>
+
+        <div class="author-feat-card">
+          <div class="feat-icon-box" style="background: rgba(239, 68, 68, 0.15); color: var(--accent-rose);"><i
+              class="fas fa-gamepad"></i></div>
+          <h4>Đấu Trường Tri Thức 12</h4>
+          <p>Trò chơi trắc nghiệm 3 chế độ: Tháp Tri Thức Sinh Tồn (10 tầng, 3 tim ❤️), Đua Tốc Độ 60 Giây và Thần Tốc
+            Văn Học kèm 3 quyền trợ giúp (50:50, Đổi câu, Đóng băng).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="author-cta-banner">
+      <h3>Sẵn Sàng Chinh Phục Điểm 9+ Cùng Sĩ Tử 12?</h3>
+      <p>Bắt đầu hành trình ôn thi THPT Quốc Gia với trải nghiệm học tập hiện đại, trực quan và hiệu quả nhất ngay hôm
+        nay!</p>
+      <a href="app.html" class="btn-hero-cta" style="font-size: 1.2rem; padding: 1.15rem 2.8rem;">
+        <i class="fas fa-rocket"></i> VÀO TRANG HỌC TẬP & ĐẤU TRƯỜNG NGAY <i class="fas fa-arrow-right"></i>
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>© 2026 <strong>Đồ Án Sĩ Tử 12 - Tri Thức Vàng</strong>. Thực hiện bởi <strong>Lê Hồng Quân & Đỗ Tiến Dũng</strong> (Chi Đoàn 12A2 — THPT Yên Lãng) • GVHD: <strong>Cô Võ Thị Mỹ Ngà</strong>.</p>
+    <p style="margin-top: 0.35rem; font-size: 0.8rem; color: var(--text-muted);">Đồng hành cùng học sinh lớp 12 trên con
+      đường chinh phục cánh cổng trường Đại học mơ ước.</p>
+  </footer>
+
+  <!-- Theme Script -->
+  <script>
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const savedTheme = localStorage.getItem('theme_preference') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme_preference', next);
+        updateThemeIcon(next);
+      });
+    }
+
+    function updateThemeIcon(theme) {
+      const icon = document.querySelector('#theme-toggle-btn i');
+      if (!icon) return;
+      icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+  </script>
+</body>
+
+</html>

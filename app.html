@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sĩ Tử 12 - Tổng Hợp Kiến Thức Ngữ Văn & Đấu Trường Tri Thức THPTQG</title>
+  <meta name="description"
+    content="Trang web tổng hợp kiến thức trọng tâm môn Ngữ Văn lớp 12, sổ tay công thức đa môn và trò chơi Đấu Trường Tri Thức chinh phục điểm 9-10 kỳ thi tốt nghiệp THPT.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Ambient Glow Background -->
+  <div class="ambient-glow"></div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Main Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="logo-wrapper" onclick="location.reload()">
+        <div class="logo-icon">
+          <i class="fas fa-feather-pointed"></i>
+        </div>
+        <div class="logo-text">
+          <h1>SĨ TỬ 12 <span class="badge-year">THPT QG</span></h1>
+          <p>Cẩm Nang Ngữ Văn & Đấu Trường Tri Thức</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="main-nav" id="main-nav">
+        <button class="nav-tab-btn active" data-target="works-pane">
+          <i class="fas fa-book-bookmark"></i> Tác Phẩm 12
+        </button>
+        <button class="nav-tab-btn" data-target="quotes-pane">
+          <i class="fas fa-quote-right"></i> Nhận Định
+        </button>
+        <button class="nav-tab-btn" data-target="nlxh-pane">
+          <i class="fas fa-pen-nib"></i> NLXH 200 Chữ
+        </button>
+        <button class="nav-tab-btn" data-target="doc-hieu-pane">
+          <i class="fas fa-magnifying-glass"></i> Đọc Hiểu 3Đ
+        </button>
+        <button class="nav-tab-btn" data-target="multi-sub-pane">
+          <i class="fas fa-layer-group"></i> Sổ Tay Đa Môn
+        </button>
+        <button class="nav-tab-btn" data-target="flashcards-pane">
+          <i class="fas fa-bolt"></i> Flashcards 3D
+        </button>
+        <button class="nav-tab-btn highlight-game" data-target="game-pane">
+          <i class="fas fa-gamepad"></i> Đấu Trường 12
+        </button>
+        <button class="nav-tab-btn" data-target="achievements-pane">
+          <i class="fas fa-medal"></i> Bảng Vàng
+        </button>
+        <a href="index.html" class="nav-tab-btn author-link" title="Xem thông tin người làm đề tài">
+          <i class="fas fa-user-graduate"></i> Tác Giả
+        </a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button class="btn-icon" id="sound-toggle-btn" title="Bật/Tắt âm thanh">
+          <i class="fas fa-volume-high"></i>
+        </button>
+        <button class="btn-icon" id="theme-toggle-btn" title="Chuyển chế độ Sáng/Tối">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="btn-icon" id="btn-print-notes" title="In đề cương ôn tập">
+          <i class="fas fa-print"></i>
+        </button>
+        <button class="btn-icon mobile-menu-btn" id="mobile-menu-btn" title="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- App Main Content -->
+  <main class="app-main">
+    <!-- Daily Motivation Banner -->
+    <section class="daily-banner">
+      <div class="daily-banner-content">
+        <i class="fas fa-quote-left"></i>
+        <div>
+          <p class="quote-quote" id="daily-quote-text">"Kỷ luật hôm nay là điểm số 9+ của ngày mai."</p>
+          <span class="quote-by" id="daily-quote-author">— Bí kíp Thủ Khoa</span>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-sm" onclick="document.querySelector('[data-target=\'game-pane\']').click()">
+        <i class="fas fa-play"></i> Luyện đề ngay
+      </button>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 1: TÁC PHẨM VĂN HỌC 12 TRỌNG TÂM      -->
+    <!-- ========================================== -->
+    <section class="tab-content-pane active" id="works-pane">
+      <div class="section-header">
+        <h2><i class="fas fa-book-open"></i> Tác Phẩm Ngữ Văn Lớp 12 Trọng Tâm</h2>
+        <p>Hệ thống kiến thức cốt lõi, hoàn cảnh sáng tác, sơ đồ luận điểm và mẹo ghi trọn điểm 8.5+ bài thi THPT Quốc
+          Gia.</p>
+      </div>
+
+      <!-- Filter & Search Bar -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <button class="filter-btn genre-filter-btn active" data-genre="all">Tất cả tác phẩm</button>
+          <button class="filter-btn genre-filter-btn" data-genre="poetry">Thơ ca & Trường ca</button>
+          <button class="filter-btn genre-filter-btn" data-genre="prose">Văn xuôi & Tùy bút</button>
+        </div>
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="work-search-input" class="search-input"
+            placeholder="Tìm tác phẩm, tác giả (ví dụ: Tây Tiến, Xuân Tóc Đỏ, Lor-ca...)">
+        </div>
+      </div>
+
+      <!-- Works Cards Grid -->
+      <div class="grid-cards" id="literature-works-grid">
+        <!-- Javascript renders works here -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: NHẬN ĐỊNH VĂN HỌC ĐẮT GIÁ          -->
+    <!-- ========================================== -->
+    <section class="tab-content-pane" id="quotes-pane">
+      <div class="section-header">
+        <h2><i class="fas fa-gem"></i> Kho Nhận Định Văn Học Đắt Giá</h2>
+        <p>Tuyển tập những câu nhận định kinh điển từ các nhà phê bình, danh nhân văn học để trích dẫn vào Mở bài, Kết
+          bài và Bình luận nâng cao.</p>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-group">
+          <button class="filter-btn quote-filter-btn active" data-cat="all">Tất cả chủ đề</button>
+          <button class="filter-btn quote-filter-btn" data-cat="thơ">Về Thơ ca</button>
+          <button class="filter-btn quote-filter-btn" data-cat="hiện thực">Hiện thực & Cuộc sống</button>
+          <button class="filter-btn quote-filter-btn" data-cat="nghệ thuật">Nghệ thuật chân chính</button>
+          <button class="filter-btn quote-filter-btn" data-cat="phong cách">Phong cách tác giả</button>
+        </div>
+      </div>
+
+      <div class="grid-cards" id="quotes-container">
+        <!-- Javascript renders quotes here -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: NGHỊ LUẬN XÃ HỘI (200 CHỮ)         -->
+    <!-- ========================================== -->
+    <section class="tab-content-pane" id="nlxh-pane">
+      <div class="section-header">
+        <h2><i class="fas fa-feather-pointed"></i> Cẩm Nang Nghị Luận Xã Hội (Đoạn Văn 200 Chữ)</h2>
+        <p>Mô hình 5 bước vàng chuẩn barem chấm Bộ GD&ĐT cùng kho dẫn chứng thời sự chọn lọc giúp đạt trọn 1.75 - 2.0
+          điểm.</p>
+      </div>
+
+      <!-- 5-Step Formula -->
+      <h3 class="section-title"><i class="fas fa-route"></i> Quy Trình 5 Bước Viết Đoạn Văn 200 Chữ</h3>
+      <div class="steps-grid" id="nlxh-steps">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Real-world Evidence Bank -->
+      <h3 class="section-title"><i class="fas fa-star"></i> Kho Dẫn Chứng Thời Sự Tiêu Biểu</h3>
+      <div class="evidence-grid" id="nlxh-evidence">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Important Rules -->
+      <div class="exam-tip-box">
+        <i class="fas fa-triangle-exclamation"></i>
+        <div>
+          <strong>3 Quy tắc bất di bất dịch phòng thi:</strong>
+          <ul style="margin-top: 0.35rem; padding-left: 1.2rem;">
+            <li>Tuyệt đối KHÔNG xuống dòng: Đoạn văn 200 chữ chỉ viết trong một đoạn văn duy nhất. Xuống dòng bị trừ
+              0.25 - 0.5 điểm hình thức!</li>
+            <li>Dung lượng an toàn: Khoảng 2/3 đến 3/4 trang giấy thi (từ 18 đến 25 dòng).</li>
+            <li>Dẫn chứng phải có số liệu, tên tuổi xác thực, mang tính thời sự hoặc truyền cảm hứng mạnh mẽ.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: BÍ KÍP ĐỌC HIỂU (3 ĐIỂM)           -->
+    <!-- ========================================== -->
+    <section class="tab-content-pane" id="doc-hieu-pane">
+      <div class="section-header">
+        <h2><i class="fas fa-clipboard-check"></i> Bí Kíp Trọng Tâm Phần Đọc Hiểu</h2>
+        <p>Bảng nhận diện nhanh 6 Phong cách ngôn ngữ, 6 Phương thức biểu đạt và công thức trả lời câu hỏi tác dụng biện
+          pháp tu từ.</p>
+      </div>
+
+      <div class="doc-hieu-grid" id="doc-hieu-container">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 5: SỔ TAY CÔNG THỨC ĐA MÔN            -->
+    <!-- ========================================== -->
+    <section class="tab-content-pane" id="multi-sub-pane">
+      <div class="section-header">
+        <h2><i class="fas fa-atom"></i> Sổ Tay Kiến Thức Đa Môn THPT Quốc Gia</h2>
+        <p>Tổng hợp nhanh công thức và mẹo nhớ cốt lõi cho các môn Toán, Vật lí, Hóa học, Tiếng Anh, Sinh học và Lịch
+          sử.</p>
+      </div>
+
+      <div class="multi-sub-grid" id="multi-subject-container">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 6: FLASHCARDS 3D TƯƠNG TÁC            -->
+    <!-- ========================================== -->
+    <section class="tab-content-pane" id="flashcards-pane">
+      <div class="section-header" style="text-align: center; align-items: center;">
+        <h2><i class="fas fa-bolt"></i> Thẻ Ghi Nhớ Flashcards 3D</h2>
+        <p>Nhấp vào thẻ để lật xem đáp án và gợi ý. Ôn tập nhanh từng chi tiết nghệ thuật và công thức đắt giá.</p>
+      </div>
+
+      <div class="flashcards-container">
+        <div class="flashcard-3d" id="flashcard-element">
+          <!-- Front Face -->
+          <div class="card-face card-front">
+            <div class="card-header-meta">
+              <span class="badge badge-primary" id="fc-subject-badge">Ngữ văn 12</span>
+              <span class="card-prompt-hint"><i class="fas fa-rotate"></i> Chạm để lật thẻ</span>
+            </div>
+            <div class="card-main-content">
+              <h3 id="fc-question">Nội dung câu hỏi flashcard...</h3>
+            </div>
+            <div class="card-footer-action">
+              <span><i class="fas fa-hand-pointer"></i> Nhấn để xem câu trả lời</span>
+            </div>
+          </div>
+
+          <!-- Back Face -->
+          <div class="card-face card-back">
+            <div class="card-header-meta">
+              <span class="badge badge-accent">Đáp Án Chi Tiết</span>
+              <span class="card-prompt-hint"><i class="fas fa-rotate"></i> Chạm để quay lại</span>
+            </div>
+            <div class="card-main-content">
+              <p class="card-answer-text" id="fc-answer">Nội dung câu trả lời...</p>
+              <p class="card-hint-text" id="fc-hint">💡 Gợi ý nhớ nhanh</p>
+            </div>
+            <div class="card-footer-action">
+              <span><i class="fas fa-check"></i> Đã ghi nhớ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flashcard-controls">
+          <button class="btn btn-secondary" id="fc-prev" title="Thẻ trước">
+            <i class="fas fa-chevron-left"></i> Thẻ trước
+          </button>
+          <span class="fc-counter-badge" id="fc-counter">1 / 10</span>
+          <button class="btn btn-secondary" id="fc-next" title="Thẻ tiếp theo">
+            Thẻ kế tiếp <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 7: ĐẤU TRƯỜNG TRI THỨC 12 (TRÒ CHƠI)   -->
+    <!-- ========================================== -->
+    <section class="tab-content-pane" id="game-pane">
+      <div class="game-wrapper">
+        <!-- 1. GAME LOBBY -->
+        <div class="game-lobby" id="game-lobby">
+          <div class="game-lobby-hero">
+            <h2>🏆 ĐẤU TRƯỜNG TRI THỨC 12</h2>
+            <p>Thử thách bản lĩnh sĩ tử với câu hỏi trắc nghiệm mô phỏng đề thi THPT Quốc Gia & chuyên sâu Văn học.</p>
+          </div>
+
+          <div class="game-modes-grid">
+            <!-- Mode 1: Tháp Tri Thức -->
+            <div class="mode-card">
+              <div class="mode-icon"><i class="fas fa-dungeon"></i></div>
+              <h3>Tháp Tri Thức</h3>
+              <p>Chinh phục 10 tầng tháp thử thách với 3 mạng sống. Độ khó tăng dần kết hợp combo nhân điểm số!</p>
+              <button class="btn btn-gold" onclick="gameEngine.startGame('tower')">
+                <i class="fas fa-play"></i> Vượt Tháp
+              </button>
+            </div>
+
+            <!-- Mode 2: Đua Tốc Độ 60s -->
+            <div class="mode-card">
+              <div class="mode-icon"><i class="fas fa-stopwatch-20"></i></div>
+              <h3>Đua Tốc Độ 60s</h3>
+              <p>Thử thách phản xạ cực nhanh dưới áp lực đồng hồ 60 giây. Trả lời càng nhiều điểm càng cao!</p>
+              <button class="btn btn-primary" onclick="gameEngine.startGame('speedrun')">
+                <i class="fas fa-bolt"></i> Bắt Đầu Đua
+              </button>
+            </div>
+
+            <!-- Mode 3: Chuyên Sâu Ngữ Văn -->
+            <div class="mode-card">
+              <div class="mode-icon"><i class="fas fa-book-journal-whills"></i></div>
+              <h3>Thần Tốc Văn Học</h3>
+              <p>100% câu hỏi chuyên sâu về tác phẩm, tác giả, hình tượng nhân vật và nghệ thuật thi ca lớp 12.</p>
+              <button class="btn btn-secondary" onclick="gameEngine.startGame('literature')">
+                <i class="fas fa-feather-pointed"></i> Thách Đấu Văn
+              </button>
+            </div>
+          </div>
+
+          <!-- High Score Bar -->
+          <div class="stats-summary-bar">
+            <div class="stat-item">
+              <span class="stat-label">Kỷ lục Tháp Tri Thức</span>
+              <span class="stat-number" id="best-tower-score">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Kỷ lục Đua Tốc Độ</span>
+              <span class="stat-number" id="best-speed-score">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Kỷ lục Thần Tốc Văn</span>
+              <span class="stat-number" id="best-lit-score">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Huy hiệu đạt được</span>
+              <span class="stat-number" id="achievements-count">0/8</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. GAME ARENA (ACTIVE QUESTION) -->
+        <div class="game-arena" id="game-arena" style="display: none;">
+          <!-- Top Bar -->
+          <div class="arena-topbar">
+            <div class="arena-status-group">
+              <span class="status-badge-item">Điểm: <strong id="game-score-val">0</strong></span>
+              <span class="multiplier-badge" id="game-streak-val">x1.0</span>
+              <span class="status-badge-item" id="game-floor-val">Tầng 1/10</span>
+            </div>
+            <div class="lives-container" id="game-lives-container">
+              <!-- Rendered by JS -->
+            </div>
+            <button class="btn-icon btn-sm" onclick="gameEngine.backToLobby()" title="Thoát về sảnh">
+              <i class="fas fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Timer Bar -->
+          <div class="timer-container">
+            <div class="timer-track">
+              <div class="timer-bar" id="game-timer-bar"></div>
+            </div>
+            <span class="card-prompt-hint" id="game-timer-sec"
+              style="position: absolute; right: 0; top: -1.3rem;">25s</span>
+          </div>
+
+          <!-- Question Box -->
+          <div class="question-box">
+            <div class="question-box-header">
+              <span class="badge" id="game-sub-badge">Ngữ văn</span>
+              <span class="card-prompt-hint">Dùng phím A, B, C, D trên bàn phím</span>
+            </div>
+            <h3 class="question-text" id="game-question-text">Câu hỏi đang tải...</h3>
+          </div>
+
+          <!-- Options Grid -->
+          <div class="options-grid" id="game-options-container">
+            <!-- Options rendered by JS -->
+          </div>
+
+          <!-- Lifelines Bar -->
+          <div class="lifelines-bar">
+            <button class="lifeline-btn" id="ll-5050" onclick="gameEngine.useHalfHalf()">
+              <i class="fas fa-scissors"></i> 50:50
+            </button>
+            <button class="lifeline-btn" id="ll-swap" onclick="gameEngine.useSwap()">
+              <i class="fas fa-arrows-rotate"></i> Đổi câu hỏi
+            </button>
+            <button class="lifeline-btn" id="ll-freeze" onclick="gameEngine.useFreeze()">
+              <i class="fas fa-snowflake"></i> Đóng băng (+10s)
+            </button>
+          </div>
+
+          <!-- Feedback Box -->
+          <div class="game-feedback-box" id="game-feedback-box" style="display: none;">
+            <h4 class="feedback-title" id="feedback-title">Chính xác!</h4>
+            <p class="feedback-explanation" id="feedback-explanation">Giải thích chi tiết...</p>
+            <p class="feedback-tip" id="feedback-tip">Mẹo nhớ...</p>
+            <div class="feedback-footer">
+              <button class="btn btn-primary" id="feedback-next-btn">
+                Tiếp tục (Nhấn Enter) <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. GAME SUMMARY (GAME OVER / VICTORY) -->
+        <div class="game-summary" id="game-summary" style="display: none;">
+          <div class="game-summary-card">
+            <i class="fas fa-trophy summary-trophy"></i>
+            <h3 class="summary-title" id="summary-reason">Vượt Tháp Thành Công!</h3>
+            <div class="summary-rank-badge" id="summary-rank-title">Thủ Khoa Toàn Quốc 🌟</div>
+
+            <div class="summary-stats-grid">
+              <div class="summary-stat-box">
+                <span>Tổng Điểm</span>
+                <strong id="summary-score">0</strong>
+              </div>
+              <div class="summary-stat-box">
+                <span>Số Câu Đúng</span>
+                <strong id="summary-correct">0 câu</strong>
+              </div>
+              <div class="summary-stat-box">
+                <span>Chuỗi Bất Bại</span>
+                <strong id="summary-streak">0 câu</strong>
+              </div>
+            </div>
+
+            <!-- Wrong answers review -->
+            <div id="summary-wrong-review">
+              <!-- Rendered by JS -->
+            </div>
+
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+              <button class="btn btn-gold" id="btn-play-again">
+                <i class="fas fa-rotate-right"></i> Chơi lại ngay
+              </button>
+              <button class="btn btn-secondary" id="btn-back-lobby">
+                <i class="fas fa-house"></i> Về sảnh chờ
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 8: THÀNH TÍCH & BẢNG VÀNG             -->
+    <!-- ========================================== -->
+    <section class="tab-content-pane" id="achievements-pane">
+      <div class="section-header">
+        <h2><i class="fas fa-award"></i> Bảng Vàng & Hệ Thống Danh Hiệu Sĩ Tử</h2>
+        <p>Bộ sưu tập các danh hiệu học bá đạt được khi ôn luyện và thi đấu trắc nghiệm.</p>
+      </div>
+
+      <div class="achievements-grid" id="achievements-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Chi Tiết Tác Phẩm -->
+  <div class="modal-overlay" id="work-detail-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="studyEngine.closeModal()" title="Đóng">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <div id="work-detail-content">
+        <!-- Dynamic content rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>© 2026 <strong>Sĩ Tử 12 - Tri Thức Vàng</strong>. Thực hiện bởi <strong>Lê Hồng Quân & Đỗ Tiến Dũng</strong> (Chi Đoàn 12A2 — THPT Yên Lãng) • GVHD: <strong>Cô Võ Thị Mỹ Ngà</strong>.</p>
+    <p style="margin-top: 0.35rem; font-size: 0.8rem; color: var(--text-muted);">Đồng hành cùng học sinh lớp 12 trên con đường chinh phục cánh cổng trường Đại học mơ ước.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/study.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
